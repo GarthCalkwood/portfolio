@@ -1,35 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-
 /* Global styles */
-
 body {
-  margin: 0;
-  font-size: 21px;
   background-color: whitesmoke
-}
-
-/* Typography */
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 28px;
 }
 
 /* Layout */
 footer {
-  padding: 100px 0px;
-  margin: auto;
-  color: whitesmoke;
+  padding: 100px 10px;
   background-color: darkslateblue; 
-  text-align: center;
 }
 
 #skills {
@@ -51,13 +30,3 @@ footer {
   border: solid 2px white;
   border-radius: 25px;
 }
-
-#contact {
-  width: 50%;
-  margin: auto;
-  border: solid 2px gray;
-  border-radius: 25px;
-  padding: 15px;
-  text-align: center;
-}
-

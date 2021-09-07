@@ -77,17 +77,27 @@
     </main>
     
     <footer>
-      <div id="contact">
-      <h2>Contact</h2>  
-        <form>
-          <input type="text" name="name" placeholder="Name" >
-          <input type="text" name="email" placeholder="Email" >
-          <br>
-          <textarea name="message" placeholder="Message" rows=10 cols=40></textarea>
-          <br>
-          <button>Send Message</button>
-        </form>
-      </div>
+      <form>
+        <div class="border shadow rounded w-50 p-4 mx-auto my-5 bg-body text-center">
+          <h2 class="mb-3">Questions or Comments?</h2>
+          <p class="mb-4"> Feel free to leave me a message and I'll get back to you as soon as possible!</p>
+          <div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="nameInput" placeholder="Name" >
+              <label for="nameInput">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="emailInput" placeholder="Email" >
+              <label for="emailInput">Email</label>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea id="messageTextArea" class="form-control" placeholder="Message" style="height: 200px"></textarea>
+            <label for="messageTextArea">Message</label>
+          </div>
+          <button type="button" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
     </footer>
   </body>
 </html>
