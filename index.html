@@ -59,31 +59,31 @@
       <div>
         <div class="container mt-5">
           <div class="row">
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Python">
               <img src="images/python.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Java">
               <img src="images/java.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="C++">
               <img src="images/cplusplus.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="JavaScript">
               <img src="images/javascript.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML">
               <img src="images/html5.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="CSS">
               <img src="images/css.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="React.js">
               <img src="images/react.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Node.js">
               <img src="images/nodejs.svg" class="img-fluid">
             </div>
-            <div class="col">
+            <div class="col" data-bs-toggle="tooltip" data-bs-placement="top" title="MongoDB">
               <img src="images/mongodb.svg" class="img-fluid">
             </div>
           </div>
@@ -121,5 +121,12 @@
         </div>
       </form>
     </footer>
+
+    <script>
+      const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+      })
+    </script>
   </body>
 </html>
