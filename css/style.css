@@ -5,6 +5,14 @@ body {
   background-color: whitesmoke
 }
 
+a {
+  color: inherit;
+}
+
+i {
+  font-size: 50px;
+}
+
 /* Layout */
 footer {
   padding: 100px 10px;
