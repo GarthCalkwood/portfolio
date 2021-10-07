@@ -19,6 +19,11 @@ footer {
   background-color: darkslateblue; 
 }
 
+#head {
+  height: calc(100vh - 56px);
+  min-height: 150px;
+}
+
 #skills {
   width: 50%;
   margin: 100px auto;
