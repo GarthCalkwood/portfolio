@@ -21,10 +21,6 @@ footer {
   min-height: 150px;
 }
 
-.pt-5 {
-  padding-top: 100px !important;
-}
-
 /* Icons */
 #home {
   font-size: 20px;
@@ -32,4 +28,36 @@ footer {
 
 #social-icon {
   font-size: 50px;
+}
+
+/* Projects */
+.project {
+  position: relative;
+  text-align: center;
+  background: white;
+}
+
+.project-img {
+  filter: brightness(50%);
+}
+
+.project:hover > .project-img{
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  filter: brightness(50%);
+  opacity: 0.75;
+  transition: 0.5s
+}
+
+.project-title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+/* Extra padding so section titles aren't covered by navbar */
+.navbar-padding {
+  padding-top: 100px;
 }
