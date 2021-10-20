@@ -52,11 +52,7 @@ main {
   background-color: #3A7186;
 }
 
-#name-input, #email-input, #message-input {
-  background-color: #3A7186;
-}
-
-#contact-form {
+#contact-form, #name-input, #email-input, #message-input {
   color: white;
   background-color: #3A7186;
 }
