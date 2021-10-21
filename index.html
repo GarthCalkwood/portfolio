@@ -22,13 +22,21 @@
     </script>
     <script type="text/javascript">
       window.onload = () => {
+        const successToastEl = document.getElementById("successToast");
+        const errorToastEl = document.getElementById("errorToast");
+        const successToast = bootstrap.Toast.getOrCreateInstance(successToastEl);
+        const errorToast = bootstrap.Toast.getOrCreateInstance(errorToastEl);
+        
         document.getElementById("contact-form").addEventListener("submit", function(event) {
           event.preventDefault();
           emailjs.sendForm("contact_service", "contact_form", this)
             .then(() => {
               console.log("SUCCESS!");
+              this.reset();
+              successToast.show();
             }), (error) => {
               console.log("ERROR: ", error);
+              errorToast.show();
             }
         });
       }
@@ -196,15 +204,15 @@
             <h2 class="mb-3">Questions or Comments?</h2>
             <p class="mb-5"> Feel free to leave me a message and I'll get back to you as soon as possible!</p>
             <div class="form-floating mb-3">
-              <input type="text" name="user_name" class="form-control" id="name-input" placeholder="Name" >
+              <input type="text" name="user_name" class="form-control" id="name-input" placeholder="Name" required>
               <label for="nameInput">Name</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="email" name="user_email" class="form-control" id="email-input" placeholder="Email" >
+              <input type="email" name="user_email" class="form-control" id="email-input" placeholder="Email" required>
               <label for="emailInput">Email</label>
             </div>
             <div class="form-floating mb-3">
-              <textarea id="message-input" name="message" class="form-control" placeholder="Message" style="height: 200px"></textarea>
+              <textarea id="message-input" name="message" class="form-control" placeholder="Message" required style="height: 200px"></textarea>
               <label for="messageTextArea">Message</label>
             </div>
             <button type="submit" class="btn btn-primary my-3">Send Message</button>
@@ -218,15 +226,46 @@
               <i id="social-icon" class="bi bi-linkedin"></i>
             </a>
           </div>
+          <!-- Toasts -->
+          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <!-- Success -->
+            <div id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto">Message successfully sent.</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+            <!-- Error -->
+            <div id="errorToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="me-auto">Error sending message. Please try again later.</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </main>
       
+      <!-- Initialize tooltips -->
       <script>
-        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         tooltips.forEach(t => {
-          new bootstrap.Tooltip(t)
-        })
+          new bootstrap.Tooltip(t);
+        });
       </script>
+      <!-- Initialize toasts -->
+      <script>
+        const option = {
+          animation: true
+        };
+
+        const toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        const toastList = toastElList.map(toastEl => {
+          return new bootstrap.Toast(toastEl, option);
+        });
+      </script>
+
     </div>
   </body>
 </html>
