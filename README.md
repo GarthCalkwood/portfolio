@@ -1,10 +1,10 @@
 # Portfolio
-A portfolio webpage built with JavaScript, HTML, CSS, and Bootstrap.
+A portfolio webpage for showcasing my recent projects, built with JavaScript, HTML, CSS, and Bootstrap.
 
-### [Live demo](https://garthcalkwood.com)
+### [Website](https://garthcalkwood.com)
 
 ## Project Status
-This project is currently in development. Live demos and mockup images for the project section are in progress.
+This project is currently in development. Mockup images for the project section and a live demo for the metronome project are in progress.
 
 ## Installation
 
